@@ -14,42 +14,51 @@
  limitations under the License.
 -->
 
-# 📦 Project Name  
+# 📦 Face Attendance Solenoid Door Lock 
 Pendeteksian wajah dengan output doorlock
 
 ## ✨ Features  
-- Struktur modular berbasis **MVC**  
-- Widget Tkinter yang bisa digunakan ulang  
-- Konfigurasi global yang mudah diatur  
+
 
 ## ⚙️ Installation & 🚀 Usage 
 - Clone Project
 ```
-git clone https://github.com/username/project_name.git
+git clone https://github.com/JehianKamal/face-attendance-solenoid-door-lock.git
 ```
 - Buka Project
 ```
-cd project_name
+cd face-attendance-solenoid-door-lock
 ```
 - Install requirements
 ```
 pip install -r requirements.txt
 ```
-- Run Project
-```p
-ython main.py
+- Run Project </br>
+Pertama: Jalan program yang ada di dalam folder `examples/` 
 ```
+cd examples
+```
+Kedua: Jalankan program dibawah untuk mencapture gambar yang akan dilatih. Setelah kamera muncul dan wajah terdeteksi segera tekan tombol `c` sebanyak 5 kali diterminal sampai ada `[INFO] 5 IMAGE CAPTURE SUCCESSFULL`.
+```
+python take_pictures.py
+```
+Ketiga: Jalankan program dibawah untuk melakukan training data. Data training akan otomatis tesimpan dalam folder 
+```
+python train.py
+```
+Keempat: Sebelum menjalankan program. Buka program `test.py` dan ubah bagian dibawah dengan nama dari wajah/user
+```
+known_names = ['Arief Setyo Nugroho']
+```
+Kelima:: Jalankan program dibawah untuk melakukan testing 
 
 
 ## Notes
-- Create requirements.txt
+Saat mau melakukan capture ulang, hapus semua gambar yang ada pada folder `faces_data`. Jika ingin menambah data tanpa menghapus data gambar lama, ganti id yang ada di program `take_pictures.py`.
 ```
-pip freeze > requirements.txt
+ids = 1  # ganti id jika lebih dari satu orang
 ```
-
-- If only library used
+Setelah itu, tambahkan nama dari gambar di `test.py`
 ```
-pip install pipreqs
-pipreqs . --force
-pipreqs project_name --force (Jika mau update)
+known_names = ['Arief Setyo Nugroho', 'Nama_gambar_baru]
 ```
