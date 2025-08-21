@@ -62,3 +62,9 @@ Setelah itu, tambahkan nama dari gambar di `test.py`
 ```
 known_names = ['Arief Setyo Nugroho', 'Nama_gambar_baru]
 ```
+
+## ScreenShoot
+
+
+https://github.com/user-attachments/assets/11a3faba-4f77-4eef-b693-bc2525d05002
+
