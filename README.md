@@ -15,7 +15,7 @@
 -->
 
 # 📦 Project Name  
-Deskripsi singkat tentang proyek ini.
+Pendeteksian wajah dengan output doorlock
 
 ## ✨ Features  
 - Struktur modular berbasis **MVC**  
